@@ -20,7 +20,7 @@ celery由三部分组成
 - **任务执行单元（Worker）**：任务执行单元，负责从消息队列中取出任务执行，它可以启动一个或者多个，也可以启动在不同的机器节点，这就是其实现分布式的核心
 - **任务执行结果存储（Backend）**：Celery支持以不同方式存储任务的结果，官方提供了诸多的存储方式支持：RabbitMQ、 Redis、Memcached,SQLAlchemy, Django ORM、Apache Cassandra、Elasticsearch等
 
-![](E:\Study\Python\Django\image\celery.png)
+![](https://github.com/delbertliu66/celery_test/blob/master/images/celery.png)
 
 - 任务模块Task包含异步任务和定时任务。其中，异步任务通常在业务逻辑中被触发并发往消息队列，而定时任务由Celery Beat进程周期性地将任务发往消息队列
 - 任务执行单元Worker实时监视消息队列获取队列中的任务执行
@@ -209,7 +209,7 @@ Windows对celery进行调试比较困难，似乎celery4.0 之后，已经不支
 
 ### 配置pycharm
 
-![](E:\Study\Python\Django\image\pycharm配置celery调试.png)
+![](https://github.com/delbertliu66/celery_test/blob/master/images/pycharm%E9%85%8D%E7%BD%AEcelery%E8%B0%83%E8%AF%95.png)
 
 - Name： 配置调试器的名字
 - Module name（script name)：在Windows中如果配置的是script name 可能会出现未知错误，所以需要在下拉框中选择Module name 进行配置。一些网上配置方案在Module中配置的是celery.bin.celery，但是可能无法启动，需要改为 celery
@@ -290,7 +290,7 @@ pip install django-celery-beat
 
   - 在admin管理后台创建
 
-    ![](E:\Study\Python\Django\image\admin创建异步任务.png)
+    ![](https://github.com/delbertliu66/celery_test/blob/master/images/admin%E5%88%9B%E5%BB%BA%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1.png)
 
   - 通过代码在定时任务的数据库中插入定时任务
 
