@@ -39,3 +39,11 @@ def export_users_address(users):
         for user in users:
             user_csv.writerow(user)
     return
+
+
+@app.task
+def send_mail(email):
+    print(f'向{email}发送邮件！')
+    time.sleep(5)
+    print('发送完成')
+    return '邮件发送成功 OK'
